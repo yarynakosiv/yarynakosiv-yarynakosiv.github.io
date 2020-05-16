@@ -1,0 +1,88 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+/*    font-family: 'Roboto', sans-serif;*/
+      font-family: 'Open Sans', sans-serif;
+}
+
+.container,
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fa-times {
+    font-size: 2rem;
+}
+
+#page-top section {
+    min-height: inherit;
+    padding: 0;
+}
+#page-top #s2{
+    padding-top: 50px;
+}
+
+
+/* Плавні зміни властивостей лінків */
+
+a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+/*************************************/
+
+
+/* Зміни CSS коду розпочинати звідси */
+
+
+/*************************************/
+
+#s2 .container  {
+    padding: 20px 40px;
+}
+
+a {
+    color: #0066FF;
+    /* Колір текстових лінків */
+}
+
+a:focus,
+a:hover {
+    color: #0066FF;
+    /* Колір текстових лінків для псевдокласів */
+}
+
+
+/**************************************/
+
+
+/* Зміна властивостей для breakpoints */
+
+
+/**************************************/
+
+@media screen and (max-width:575px) {
+    .container,
+    .navbar {
+        padding: 10px 20px;
+        /* зліва та справа у .container та .navbar */
+    }
+    /* Приклад зміни відступів зверху, знизу для секцій на Small екранах */
+    section {
+        /*        padding: 25px 0;*/
+    }
+    #mainNav .navbar-brand {     /* Зовнішні відступи для Лого */
+    margin: 0;  /* зверху - 0.5rem, знизу - 0.75rem, справа та зліва - 0 */
+    width: 90px;
+}
+}
+
+@media screen and (max-width:767px) {}

@@ -1,0 +1,45 @@
+.slider-wrapper {
+    background-color: #aaa;
+/*    background-image: url("../img/bg1.jpg");*/
+    padding: 0;
+    }
+
+.carousel {
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 0;
+    }
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #444;
+    max-width: 48px;
+    max-height: 48px;
+    top: 50%;
+    margin-top:-24px;
+}
+
+.carousel-control-prev {
+    border-radius: 0 50% 50% 0;
+}
+
+.carousel-indicators {
+    background-color: aquamarine;
+    
+}
+
+.carousel-control-next {
+    border-radius: 50% 0 0 50%;
+}
+
+/* Для екранів шириною менше 767px */
+/* мінімальна висота слайдера      */
+/* рівну висоті viewport 100vh     */
+
+@media screen and (max-width:767px) {
+    
+    .carousel {
+        min-height: 100vh;
+    }
+}

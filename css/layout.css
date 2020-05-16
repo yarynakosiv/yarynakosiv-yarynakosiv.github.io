@@ -1,0 +1,184 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container,
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+/*************************************/
+
+
+#s2,
+    {
+    min-height: 100vh;
+}
+
+#s1
+{
+    min-height: 50vh;
+}
+
+#s1,
+    {
+    padding: 50px 0;
+}
+
+#header {}
+
+#s1 h2 {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.9rem;
+}
+
+#s1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+#s2,
+#s4,
+#s3
+{
+    padding: 0;
+}
+
+#s3 {
+    min-height: 69vh;
+    display: flex;
+}
+
+#s3 .container {
+    display: flex;
+    align-items: center;
+}
+
+#s3 .row {
+    justify-content: space-around;
+    
+}
+
+#s3 .row > div {
+    padding: 0 60px;
+}
+
+#s3 h3 {
+    color: #888;
+    font-weight: 600;
+}
+
+#s3 p {
+    font-size: 0.9rem;
+    padding-top: 20px;
+    font-weight: 300;
+    color: #888;
+}
+
+#s4 {
+    display: flex;
+    background-color: #4444;
+    min-height: 25vh;
+
+}
+
+
+#s4 h2 {
+}
+
+#s4 .container {
+    color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#s4 img {
+    height: 80px;
+}
+
+
+.fab {
+    color: #ffff;
+}
+
+#s4 a {
+    font-family: sans-serif;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+#s4 #contacts{
+    align-self: center;
+}
+
+#s4 h2{
+    font-size: 1rem;
+}
+
+
+/**************************************/
+
+@media screen and (max-width:575px) {
+
+    .container,
+    .navbar {
+        padding-left: 15px;
+        /* Для Small додати відступи */
+        padding-right: 15px;
+        /* зліва та справа у .container та .navbar */
+    }
+
+    section {
+        padding: 25px 0;
+    }
+
+    #s3 .row {
+    }
+
+    #s3 .row > div {
+        padding: 0;
+    }
+
+    #s4 {
+        flex-direction: column;
+
+    }
+    #s4 .container{
+        margin: 20px 0px 10px 0px;
+    }
+    #s4 img {
+
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    #s4 img {
+/*        padding: 50px;*/
+
+    }
+
+}

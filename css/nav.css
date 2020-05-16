@@ -1,0 +1,145 @@
+/*********************************/
+/* Приклад коду властивостей для */
+/* навігаційної панелі .navbar   */
+/* з ідентифікатором #mainNav    */
+/*********************************/
+
+#mainNav {
+    margin-top: 0rem;  /* Navbar зміщений вниз на 1.5rem за рахунок відступу зверху */
+    padding: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+     background: rgb(255, 255, 255);
+}
+
+/* Властивості Navbar після початку скролу */
+/* У Navbar з'являється додатковий клас .navbar-shrink */
+/* зникає відступ зверху */
+/* та змінюється колір фону */
+
+#mainNav.navbar-shrink {
+    margin-top: 0;
+    background: rgb(255, 255, 255); /* Колір фону необхідно змінити на власний */
+}
+
+
+#mainNav.navbar-shrink .navbar-collapse {
+    position: relative;
+}
+
+#mainNav.navbar-shrink .navbar-nav {
+    position: absolute;
+/*    float: right;*/
+    right: 0;
+    background-color: white;
+    min-width: 30%;
+}
+
+/* Властивості Лого */
+#mainNav .navbar-brand {     /* Зовнішні відступи для Лого */
+    margin: .0rem 0 .0rem;  /* зверху - 0.5rem, знизу - 0.75rem, справа та зліва - 0 */
+    width: 150px;
+    padding: 0;
+    
+}
+#mainNav.navbar-shrink .navbar-brand {     /* Зовнішні відступи для Лого */
+    margin: 0;  /* зверху - 0.5rem, знизу - 0.75rem, справа та зліва - 0 */
+    width: 90px;
+}
+
+
+/* Властивості "гамбургер-меню" */
+#mainNav .navbar-toggler {
+    border: none;
+    cursor: pointer;
+    outline: none;
+/*    background-color: #255;*/
+}
+
+.fa-bars:before {
+    color: #999;
+    font-size: 1.5rem;
+}
+/* Кінець властивостей "гамбургер-меню" */
+
+/* Властивості лінків меню */
+#mainNav .nav-link {
+    background: transparent;
+    border-radius: .25rem;
+    color: #999;
+    margin-left: 1rem;
+    padding: .2rem .75rem;
+    text-align: left;
+}
+
+#mainNav .nav-link:hover {
+    color: #555;
+}
+
+#mainNav .nav-link.active {
+    color: black;
+    font-weight: 600;
+}
+/* Кінець властивостей лінків меню */
+
+
+/* Зміна вигляду навігаційної панелі для екранів менше 767px */
+/* працює у парі з додатковим класом для .navbar */
+/* .navbar-expand-md. УВАГА! При зміні на клас .navbar-expand-sm */
+/* або .navbar-expand-lg необхідно змінити точку breakpoints на  */
+/* 565px або 991px відповідно до обраного класу  */
+
+@media screen and (max-width: 767px) {
+    
+    /* Зміна властивостей усіх контейнерів всередині #page-top */    
+    #page-top .container {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #mainNav .navbar-nav {
+    padding-bottom: 15px;
+}
+    /* Зміна властивостей контейнера всередині */
+    /* навігаційної панелі #mainNav */    
+    #mainNav .container {
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+    
+    /* Зміна властивостей лінків меню */    
+    #mainNav .navbar-nav {
+        background-color: white;  /* Загальний колір фон під усіма лінками */
+        max-width: 50%;
+    }
+    
+    #mainNav .nav-link {
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    #mainNav .nav-link {
+        padding: .5rem 1.5rem;
+        border-top: 1px solid #fff;
+    }
+    
+    #mainNav .nav-link,
+    #mainNav .nav-link.active,
+    #mainNav.navbar-shrink .nav-link:hover {
+        background: transparent;
+    }
+    /* Кінець змінам властивостей лінків меню */    
+    
+    /* Зміна властивостей "гамбургер-меню" */    
+    #mainNav .navbar-toggler {
+        margin-right: 15px;
+    }
+    
+    /* Зміна властивостей Лого */    
+    #mainNav .navbar-brand {
+        margin-left: 15px;
+    }
+}
